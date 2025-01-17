@@ -6,7 +6,6 @@
 | This file defines the routes for your server.
 |
 */
-require('dotenv').config(); 
 
 const express = require("express");
 
@@ -21,6 +20,8 @@ const router = express.Router();
 
 //initialize socket
 const socketManager = require("./server-socket");
+
+const path = require("path");
 
 router.post("/login", auth.login);
 router.post("/logout", auth.logout);
@@ -44,9 +45,9 @@ router.post("/initsocket", (req, res) => {
 // | write your API methods below!|
 // |------------------------------|
 
-//app.get('/', (req, res) => {
-  //res.sendFile(path.join(__dirname, '..', 'homepage.html')); // Serve about.html for '/about'
-//});
+router.get('/homepage', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'homepage.html')); // Serve homepage.html for '/'
+});
 
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {
