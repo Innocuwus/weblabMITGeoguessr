@@ -17,6 +17,7 @@ const LeaderPage = require('../client/src/components/pages/LeaderPage.jsx').defa
 const AccountSetts = require('../client/src/components/pages/AccountSetts.jsx').default;
 const NormalMode = require('../client/src/components/pages/NormalMode.jsx').default;
 const ProMode = require('../client/src/components/pages/ProMode.jsx').default;
+const PlayStage = require('../client/src/components/pages/PlayStage.jsx').default;
 const auth = require('./auth'); // Ensure this is the correct path to your auth module
 const socketManager = require('./server-socket'); // Ensure this is the correct path to your socketManager module
 
@@ -77,6 +78,11 @@ router.get('/normalmode', (req, res) => {
 
 router.get('/promode', (req, res) => {
   const html = renderComponent(ProMode);
+  res.send(html);
+});
+
+router.get('/playstage', (req, res) => {
+  const html = renderComponent(PlayStage);
   res.send(html);
 });
 
