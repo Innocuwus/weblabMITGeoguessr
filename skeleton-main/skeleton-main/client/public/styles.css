@@ -1,24 +1,24 @@
-:root {
+/* :root {
     --white: #FFFFFF;
     --black: #000000;
     --red: #FF0000; 
     --blue: #0000FF;
     --green: #0f0; 
-    --button-bg-color: #3498db;       /* Background color */
-    --button-border-color: #2980b9;   /* Border color */
-    --button-text-color: white;       /* Text color */
-    --button-size: 16px;              /* Font size */
+    --button-bg-color: #3498db;      
+    --button-border-color: #2980b9;   
+    --button-text-color: white;       
+    --button-size: 16px;              
     --button-padding: 12px 20px;
 }
-
+*/
 .primary-header{
-    background-color: var(--red);
+    background-color: #FF0000;
 }
 
 button {
     
-    color: var(--black);
-    border: 2px solid var(--green);
+    color: #000000;
+    border: 2px solid #0f0; 
     border-radius: 999999999999px;               /* Optional: For rounded corners */
     cursor: pointer;                  /* Change cursor on hover */
     transition: background-color 0.3s ease, border-color 0.3s ease;  /* Smooth transition */
@@ -63,12 +63,12 @@ hr {
     margin-bottom: 20px;
     margin-left: 100px;
     margin-right:100px;
-    background-color: var(--black);
-    color: var(--black);
+    background-color: #000000;
+    color: #000000;
 }
 
 .navBar{
-    background-color: var(--button-bg-color);
+    background-color: #2980b9;  
     text-align: center;
     
 }
