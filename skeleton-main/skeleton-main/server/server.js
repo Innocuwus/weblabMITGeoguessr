@@ -15,7 +15,12 @@
 
 // validator runs some basic checks to make sure you've set everything up correctly
 // this is a tool provided by staff, so you don't need to worry about it
-const validator = require("./validator");
+require('@babel/register')({
+  presets: ['@babel/preset-env', '@babel/preset-react']
+});
+require('ignore-styles');
+
+  const validator = require("./validator");
 validator.checkSetup();
 
 //allow us to use process.ENV
@@ -75,6 +80,9 @@ app.use(auth.populateCurrentUser);
 
 // connect user-defined routes
 app.use("/api", api);
+
+const publicPath = path.resolve(__dirname, '..', 'client', 'src', 'public');
+app.use(express.static(publicPath));
 
 // load the compiled react files, which will serve /index.html and /bundle.js
 const reactPath = path.resolve(__dirname, "..", "client", "dist");
