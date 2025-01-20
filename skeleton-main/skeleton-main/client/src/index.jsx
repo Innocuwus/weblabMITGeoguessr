@@ -60,8 +60,13 @@ const PsVita = () => {
 };
 ReactDOM.createRoot(document.getElementById('root')).render(<PsVita />);
 */
+
+
+  
+  
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom"; // Use this for router setup
 import App from "./components/App";
 import Skeleton from "./components/pages/Skeleton.jsx";
 import NotFound from "./components/pages/NotFound";
@@ -73,38 +78,32 @@ import LeaderPage from './components/pages/LeaderPage.jsx';
 import AccountSetts from './components/pages/AccountSetts.jsx';
 import ProMode from './components/pages/ProMode.jsx';
 
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider
-} from 'react-router-dom';
-
-import { GoogleOAuthProvider } from '@react-oauth/google';
-
-//TODO: REPLACE WITH YOUR OWN CLIENT_ID
+// Google Client ID
 const GOOGLE_CLIENT_ID = '155904255899-0j74s5m98cfdi6srsmohhq45aokbb0hb.apps.googleusercontent.com';
 
-// Define your router setup
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route errorElement={<NotFound />} element={<App />}>
-      <Route path="/" element={<Skeleton />} />
-      <Route path="/homepage" element={<Homepage />} />
-      <Route path="/loggedin" element={<LoggedIn />} />
-      <Route path="/easymode" element={<EasyMode />} />
-      <Route path="/normalmode" element={<NormalMode />} />
-      <Route path="/leaderpage" element={<LeaderPage />} />
-      <Route path="/accountsetts" element={<AccountSetts />} />
-      <Route path="/promode" element={<ProMode />} />
-      {/* Add other routes here */}
-    </Route>
-  )
-);
+// Define your router setup using createBrowserRouter
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <NotFound />,
+    children: [
+      { path: "/", element: <Homepage /> },
+      { path: "/loggedin", element: <LoggedIn /> },
+      { path: "/easymode", element: <EasyMode /> },
+      { path: "/normalmode", element: <NormalMode /> },
+      { path: "/leaderpage", element: <LeaderPage /> },
+      { path: "/accountsetts", element: <AccountSetts /> },
+      { path: "/promode", element: <ProMode /> },
+      { path: "/skeleton", element: <Skeleton /> },
+      { path: "*", element: <NotFound /> },
+    ],
+  },
+]);
 
-// Wrap the entire app with GoogleOAuthProvider once
-ReactDOM.createRoot(document.getElementById('root')).render(
+// Main render with GoogleOAuthProvider
+ReactDOM.createRoot(document.getElementById("root")).render(
   <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
     <RouterProvider router={router} />
   </GoogleOAuthProvider>
-); 
+);
