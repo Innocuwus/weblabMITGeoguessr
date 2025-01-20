@@ -72,3 +72,8 @@ hr {
     text-align: center;
     
 }
+
+.google-login-button {
+    visibility: visible;
+    display: block;
+}

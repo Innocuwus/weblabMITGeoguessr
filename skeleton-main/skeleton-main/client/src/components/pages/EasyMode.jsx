@@ -6,7 +6,7 @@ const EasyMode = () => {
     <div className="background">
       <link rel="stylesheet" href="/styles.css" />
       <div>Easy Mode</div>
-      <img src="/srcimages/mitGeoguessergame.png" alt="MIT Geoguesser image" />
+      <img src="/srcimages/MITgeoguessergame.png" alt="MIT Geoguesser image" />
     </div>
   );
 };
