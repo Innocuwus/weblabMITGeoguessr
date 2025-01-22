@@ -1,5 +1,6 @@
 import React from 'react';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import '/styles.css';
 
 const Homepage = () => {
 
