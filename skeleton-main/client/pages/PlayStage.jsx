@@ -1,5 +1,5 @@
 import React from 'react';
-import '/styles.css';
+import './styles.css';
 
 
 
@@ -13,7 +13,7 @@ const PlayStage = () => {
         <button id="easy">Easy</button>
         <button id="normal">Normal</button>
         <button id="pro">Pro</button>
-        <script src="/playbutton.js"></script>
+        <script src="/src/playbutton.js"></script>
       </div>
     </div>
   );

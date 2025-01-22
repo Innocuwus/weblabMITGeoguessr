@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '/styles.css';
+import './styles.css';
 
 const AccountSetts = () => {
   const [username, setUsername] = useState(''); // State variable for username

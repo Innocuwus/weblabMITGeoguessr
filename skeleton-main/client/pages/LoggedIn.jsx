@@ -1,5 +1,5 @@
 import React from 'react';
-import '/styles.css';
+import './styles.css';
 
 
 const LoggedIn = () => {
@@ -10,7 +10,7 @@ const LoggedIn = () => {
       <button type="button" id="play">Play</button>
       <button type="button" id="lead">Leaderboard</button>
       <button type="button" id="accSett">Account Settings</button>
-      <script src="/playbutton.js"></script>
+      <script src="/src/playbutton.js"></script>
     </div>
   );
 };
