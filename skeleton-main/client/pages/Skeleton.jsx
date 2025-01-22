@@ -3,7 +3,7 @@ import { GoogleLogin, googleLogout } from "@react-oauth/google";
 
 import "./styles.css";
 import "./Pages.jsx";
-import { UserContext } from "..src/components/App.jsx";
+import { UserContext } from "../src/components/App.jsx";
 
 const Skeleton = () => {
   const { userId, handleLogin, handleLogout } = useContext(UserContext);
