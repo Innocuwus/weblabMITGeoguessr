@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const EasyMode = () => {
   const images = [
     { src: '/src/srcimages/IMG_2745.jpg', value: '32' },
-    { src: 'src/srcimages/R.png', value: 'spiky' }
+    { src: '/src/srcimages/R.png', value: 'spiky' }
   ];
 
   const [randomImage, setRandomImage] = useState({});
@@ -64,7 +64,7 @@ const EasyMode = () => {
             type="text"
             value={userInput}
             onChange={handleInputChange}
-            placeholder="Guess the value"
+            placeholder="Guess the building number"
             disabled={isTimeUp}
           />
           <p>{feedback}</p>

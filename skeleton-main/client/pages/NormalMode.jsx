@@ -64,7 +64,7 @@ const NormalMode = () => {
             type="text"
             value={userInput}
             onChange={handleInputChange}
-            placeholder="Guess the value"
+            placeholder="Guess the building number"
             disabled={isTimeUp}
           />
           <p>{feedback}</p>
