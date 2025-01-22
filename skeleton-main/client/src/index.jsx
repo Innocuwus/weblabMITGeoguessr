@@ -12,6 +12,7 @@ import EasyMode from '/pages/EasyMode.jsx';
 import NormalMode from '/pages/NormalMode.jsx';
 import LeaderPage from '/pages/LeaderPage.jsx';
 import ProMode from '/pages/ProMode.jsx';
+import "/styles.css";
 
 //
 

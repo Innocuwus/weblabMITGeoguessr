@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import './styles.css';
+
 
 const ProMode = () => {
   const images = [
-    { src: '/src/srcimages/IMG_2745.jpg', value: '32' },
-    { src: '/src/srcimages/R.png', value: 'spiky' }
+    { src: '/srcimages/IMG_2745.jpg', value: '32' },
+    { src: '/srcimages/R.png', value: 'spiky' }
   ];
 
   const [randomImage, setRandomImage] = useState({});

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './styles.css';
 
 const EasyMode = () => {
   const images = [
-    { src: '/src/srcimages/IMG_2745.jpg', value: '32' },
-    { src: '/src/srcimages/R.png', value: 'spiky' }
+    { src: '/srcimages/IMG_2745.jpg', value: '32' },
+    { src: '/srcimages/R.png', value: 'spiky' }
   ];
 
   const [randomImage, setRandomImage] = useState({});
@@ -22,16 +21,16 @@ const EasyMode = () => {
   useEffect(() => {
     if (isTimeUp) return;
 
+    if (prevTime <= 1) {
+      clearInterval(timerId);
+      setIsTimeUp(true);
+      return 0;
+    }
+
+    console.log(`Time left: ${prevTime}`); // Log the time left every second
+
     const timerId = setInterval(() => {
-      setTimeLeft((prevTime) => {
-        console.log(`Time left: ${prevTime}`); // Log the time left every second
-        if (prevTime <= 1) {
-          clearInterval(timerId);
-          setIsTimeUp(true);
-          return 0;
-        }
-        return prevTime - 1;
-      });
+      setTimeLeft((prevTime) => { prevTime - 1});
     }, 1000);
 
     return () => clearInterval(timerId);
