@@ -8,7 +8,8 @@ const LeaderPage = () => {
       <div>
           <h1 className="navBar">Leaderboard</h1>
         </div>
-      <h1>The Top 10!</h1>
+        <div className='flexLeaderboard'>
+      <b>The Top 10!</b>
       <ul>
         <li>1st: </li>
         <li>2nd: </li>
@@ -21,6 +22,7 @@ const LeaderPage = () => {
         <li>9th: </li>
         <li>10th: </li>
       </ul>
+      </div>
     </div>
   );
 };

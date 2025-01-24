@@ -11,10 +11,16 @@ const PlayStage = () => {
           <h1 className="navBar">Gamemodes</h1>
         </div>
       <hr />
-      <div>
+      <div className='flexButton'>
+        <div className="flex-Buttons">
         <button id="easy">Easy</button>
+        </div>
+        <div className="flex-Buttons">
         <button id="normal">Normal</button>
+        </div>
+        <div className="flex-Buttons">
         <button id="pro">Pro</button>
+        </div>
         <script src="/src/playbutton.js"></script>
       </div>
     </div>

@@ -114,11 +114,13 @@ hr {
     align-items: center;    
     background: url("/srcimages/R.png");
     width: 350px;
-    height:350px;   
+    height: 350px;   
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
+    background-size: contain;
     font-size: 37px;   
+    margin-left: 700px;
 }
 
 .flexButton{
@@ -126,13 +128,26 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #000;
     width: 300px;
     height: 300px;
-    left: 50%;
-    top: 50%;
+    padding-top: 100px;
+    padding-left: 500px;
 }
 
 .flex-Buttons{
-    margin: 20px;
+    padding: 20px;
+}
+
+.flexLeaderboard{
+    padding-top: 200px;
+    padding-left: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    left: 50%; /* tried to center in page */
+    top: 50%;
+    font-size: 30px;
 }
