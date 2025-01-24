@@ -5,6 +5,9 @@ const LeaderPage = () => {
   return (
     <div className="background">
       <link rel="stylesheet" href="/styles.css" />
+      <div>
+          <h1 className="navBar">Leaderboard</h1>
+        </div>
       <h1>The Top 10!</h1>
       <ul>
         <li>1st: </li>

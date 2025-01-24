@@ -7,7 +7,9 @@ const PlayStage = () => {
   return (
     <div className="background">
       <link rel="stylesheet" href="/styles.css" />
-      <h1>Gamemodes</h1>
+      <div>
+          <h1 className="navBar">Gamemodes</h1>
+        </div>
       <hr />
       <div>
         <button id="easy">Easy</button>

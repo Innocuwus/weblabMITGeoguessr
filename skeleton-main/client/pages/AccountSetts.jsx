@@ -18,8 +18,8 @@ const AccountSetts = () => {
   return (
     <div className="background">
       <link rel="stylesheet" href="/styles.css" />
-      <div className='navBar'>
-      <h1>Account Settings Page</h1>
+      <div>
+      <h1 className="navBar">Account Settings Page</h1>
       </div>
       <div className="profile">
         <img src={profilePicture || '/default-profile.png'} alt="Profile" className="profile-picture" />

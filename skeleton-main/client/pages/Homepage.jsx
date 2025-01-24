@@ -21,7 +21,7 @@ const Homepage = () => {
       <div className="background">
       <link rel="stylesheet" href="/styles.css" />
         <div>
-          <h1 className="primary-header">MIT Geoguessr</h1>
+          <h1 className="navBar">MIT Geoguessr</h1>
         </div>
         <div className = "container">
         <GoogleLogin
