@@ -31,9 +31,9 @@ const Homepage = () => {
           className="google-login-button"
         />
         </div>
-        <img src="/srcimages/R.png" alt="Spiky text bubble" width="300" />
-        <div className="container">
-          Geoguessr localized to MIT's main buildings!
+        {/* <img src="/srcimages/R.png" alt="Spiky text bubble" width="300" /> */}
+        <div className="wow-container">
+         <b>Geoguessr localized to MIT's main buildings!</b>
         </div>
       </div>
   </GoogleOAuthProvider>
