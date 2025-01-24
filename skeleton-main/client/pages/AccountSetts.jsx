@@ -26,14 +26,18 @@ const AccountSetts = () => {
         <h2>{username || 'Your Username'}</h2>
       </div>
       <div className="settings">
+        <div className="settingsitem">
         <label>
           Username:
           <input type="text" value={username} onChange={handleUsernameChange} placeholder="Enter your username" />
         </label>
+        </div>
+        <div className="settingsitem">
         <label>
           Profile Picture URL:
-          <input type="text" value={profilePicture} onChange={handleProfilePictureChange} placeholder="Enter profile picture URL" />
-        </label>
+          <input type="file" value={profilePicture} onChange={handleProfilePictureChange} placeholder="Upload image" />
+        </label> 
+        </div>
       </div>
     </div>
   );
