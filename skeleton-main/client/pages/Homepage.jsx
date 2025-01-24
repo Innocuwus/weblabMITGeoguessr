@@ -27,13 +27,14 @@ const Homepage = () => {
         <GoogleLogin
           onSuccess={handleLoginSuccess}
           onError={handleLoginFailure}
-          id="google-login-button"
-          className="google-login-button"
+          useOneTap
         />
         </div>
         {/* <img src="/srcimages/R.png" alt="Spiky text bubble" width="300" /> */}
         <div className="wow-container">
+          <div className="wowtext">
          <b>Geoguessr localized to MIT's main buildings!</b>
+         </div>
         </div>
       </div>
   </GoogleOAuthProvider>
