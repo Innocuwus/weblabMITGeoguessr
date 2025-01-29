@@ -35,7 +35,7 @@ const express = require("express"); // backend framework for our node server.
 const session = require("express-session"); // library that stores info about each connected user
 const mongoose = require("mongoose"); // library to connect to MongoDB
 const path = require("path"); // provide utilities for working with file and directory paths
-
+const React = require('react');
 const api = require("./api");
 const auth = require("./auth");
 
@@ -85,7 +85,7 @@ app.use(auth.populateCurrentUser);
 app.use("/api", api);
 
 // load the compiled react files, which will serve /index.html and /bundle.js
-const reactPath = path.resolve(__dirname, "..", "client");
+const reactPath = path.resolve(__dirname, "..", "client/dist");
 app.use(express.static(reactPath));
 
 // for all other routes, render index.html and let react router handle it
