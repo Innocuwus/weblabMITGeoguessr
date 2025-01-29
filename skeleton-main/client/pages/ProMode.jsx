@@ -4,8 +4,12 @@ import React, { useState, useEffect } from 'react';
 const ProMode = () => {
   const images = [
     { src: '/srcimages/IMG_2745.jpg', value: '32' },
-    { src: '/srcimages/R.png', value: 'spiky' }
+    { src: '/srcimages/bl7.jpg', value: '7' },
+    { src: '/srcimages/bl3.jpg', value: '3' },
+    { src: '/srcimages/bl10.jpg', value: '10' },
+    { src: '/srcimages/bl26.jpg', value: '26' }
   ];
+
 
   const [randomImage, setRandomImage] = useState({});
   const [userInput, setUserInput] = useState('');
