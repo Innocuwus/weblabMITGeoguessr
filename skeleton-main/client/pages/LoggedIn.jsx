@@ -15,7 +15,7 @@ const LoggedIn = () => {
         //   }
         // });
 
-          const response = await fetch("/user", {
+          const response = await fetch("/api/user", {
             credentials: 'include', // Include cookies in the request
           });
   

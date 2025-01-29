@@ -16,11 +16,12 @@ const Homepage = () => {
   
   const handleLogin = (response) => {
     console.log('Login Success:', response);
-    const token = response.credential;
-    console.log('Token:', token); // Use the login function from auth module
-    console.log(window.location.href);
-    window.location.href = "loggedin";
-   };
+    
+    const token = response.credential; // The Google ID token
+    
+    console.log('Token:', token); // Check the token
+    window.location.href = '/loggedin'; // Redirect the user to a "logged-in" page
+  };
 
   const handleLoginFailure = (error) => {
     console.log('Login Failed:', error);

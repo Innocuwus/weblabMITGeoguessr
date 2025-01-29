@@ -27,7 +27,7 @@ const AccountSetts = () => {
       formData.append('profilePicture', profilePicture); // Add the new profile picture URL to the form data
 
       // Send a request to update the user data
-      const response = await fetch('/user', {
+      const response = await fetch('/api/user', {
         method: 'PUT',
         body: formData, // Send form data to the server
       });
