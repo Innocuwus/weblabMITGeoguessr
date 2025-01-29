@@ -42,8 +42,6 @@ router.post('/initsocket', (req, res) => {
 // |------------------------------|
 
 router.get("/user", async (req, res) => {
-  if (!req.isAuthenticated()) return res.status(401).json({ message: "Unauthorized" });
-
   try {
     const user = await User.findById(req.user.id).select("username profilePicture correctGuesses");
     if (!user) return res.status(404).json({ message: "User not found" });
