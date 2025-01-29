@@ -1,14 +1,13 @@
 import React from 'react';
 
-
-
-
 const PlayStage = () => {
   return (
     <div className="background">
       <link rel="stylesheet" href="/styles.css" />
-      <div>
-          <h1 className="navBar">Gamemodes</h1>
+      <div className="navBar">
+          <div className='flex-text'>Gamemodes</div>
+          <button id="backtolog">Previous</button>
+          <button id="signout">Sign out</button>
         </div>
       <hr />
       <div className='flexButton'>

@@ -5,8 +5,10 @@ const LeaderPage = () => {
   return (
     <div className="background">
       <link rel="stylesheet" href="/styles.css" />
-      <div>
-          <h1 className="navBar">Leaderboard</h1>
+      <div className="navBar">
+          <div className='flex-text'>Leaderboard</div>
+          <button id="backtolog">Previous</button>
+          <button id="signout">Sign out</button>
         </div>
         <div className='flexLeaderboard'>
       <b>The Top 10!</b>

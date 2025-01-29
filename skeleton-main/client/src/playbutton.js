@@ -41,15 +41,22 @@
     window.location.href = "promode";
   });
   }
-});
 
-/* 
-document.addEventListener('DOMContentLoaded', function() {
-    var playButton = document.getElementById('playButton');
-    if (playButton) {
-        playButton.addEventListener('click', function() {
-            // Your event handler code here
-        });
-    }
+  if(document.getElementById("signout")) {document.getElementById("signout").addEventListener("click", () => {
+    console.log(window.location.href);
+    window.location.href = "homepage";
+  });
+  }
+
+  if(document.getElementById("backtolog")) {document.getElementById("backtolog").addEventListener("click", () => {
+    console.log(window.location.href);
+    window.location.href = "loggedin";
+  });
+  }
+
+  if(document.getElementById("backtoplay")) {document.getElementById("backtoplay").addEventListener("click", () => {
+    console.log(window.location.href);
+    window.location.href = "playStage";
+  });
+  }
 });
-*/

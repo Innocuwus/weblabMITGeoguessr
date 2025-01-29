@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 
 const NormalMode = () => {
   const images = [
-    { src: '/src/srcimages/IMG_2745.jpg', value: '32' },
-    { src: '/src/srcimages/R.png', value: 'spiky' }
+    { src: '/srcimages/IMG_2745.jpg', value: '32' },
+    { src: '/srcimages/R.png', value: 'spiky' }
   ];
 
   const [randomImage, setRandomImage] = useState({});
@@ -51,6 +51,8 @@ const NormalMode = () => {
       <div className="navBar">
       <div className="flex-item-left"><b>Normal Mode</b></div>
       <div className="timer">Time Left: {timeLeft} seconds</div>
+      <button id="backtoplay">Previous</button>
+      <button id="signout">Sign out</button>
       </div>
       <link rel="stylesheet" href="/styles.css" />
       <div className = "flex-container">
@@ -58,7 +60,7 @@ const NormalMode = () => {
       <img src="/srcimages/MITgeoguessergame.png" alt="MIT Geoguesser image" />
       </div>
       {isTimeUp ? (
-        <div>Time's up! The correct answer was: {randomImage.value}</div>
+        <div>Time's up! The correct answer was building: {randomImage.value}</div>
       ) : (
         <div>
           <input

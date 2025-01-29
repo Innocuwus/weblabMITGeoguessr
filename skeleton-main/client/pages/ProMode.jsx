@@ -21,10 +21,9 @@ const ProMode = () => {
 
   useEffect(() => {
     if (isTimeUp) return;
-    console.log("f");
 
     const timerId = setInterval(() => {
-   /*   setTimeLeft((prevTime) => {
+      setTimeLeft((prevTime) => {
         console.log(`Time left: ${prevTime}`); // Log the time left every second
         if (prevTime <= 1) {
           clearInterval(timerId);
@@ -32,18 +31,16 @@ const ProMode = () => {
           return 0;
         }
         return prevTime - 1;
-      });*/
-      console.log("g");
-      setTimeLeft(timeLeft -1);
+      });
     }, 1000);
 
     return () => clearInterval(timerId);
-  }, []);
+  }, [isTimeUp]);
 
   const handleInputChange = (event) => {
     setUserInput(event.target.value);
     if (event.target.value.toLowerCase() === randomImage.value.toLowerCase()) {
-      setFeedback('Correct!');
+      setIsTimeUp(true);
     } else {
       setFeedback('Try again!');
     }
@@ -52,8 +49,10 @@ const ProMode = () => {
   return (
     <div className="background">
       <div className="navBar">
-      <div className="flex-item-left"><b>Pro Mode</b></div>
+      <div className="flex-item-left">Pro Mode</div>
       <div className="timer">Time Left: {timeLeft} seconds</div>
+      <button id="backtoplay">Previous</button>
+      <button id="signout">Sign out</button>
       </div>
       <link rel="stylesheet" href="/styles.css" />
       <div className = "flex-container">
@@ -61,7 +60,7 @@ const ProMode = () => {
       <img src="/srcimages/MITgeoguessergame.png" alt="MIT Geoguesser image" />
       </div>
       {isTimeUp ? (
-        <div>Time's up! The correct answer was: {randomImage.value}</div>
+        <div>Time's up! The correct answer was building: {randomImage.value}</div>
       ) : (
         <div>
           <input

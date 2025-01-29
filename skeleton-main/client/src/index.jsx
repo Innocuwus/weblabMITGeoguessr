@@ -22,10 +22,10 @@ import {
   RouterProvider
 } from 'react-router-dom'
 
-// import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 //TODO: REPLACE WITH YOUR OWN CLIENT_ID
-// const GOOGLE_CLIENT_ID = "155904255899-0j74s5m98cfdi6srsmohhq45aokbb0hb.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "155904255899-0j74s5m98cfdi6srsmohhq45aokbb0hb.apps.googleusercontent.com";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -45,7 +45,7 @@ const router = createBrowserRouter(
 
 // renders React Component "Root" into the DOM element with ID "root"
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
+  <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
     <RouterProvider router={router} />
-  // </GoogleOAuthProvider>
+   </GoogleOAuthProvider>
 );

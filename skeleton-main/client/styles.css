@@ -20,7 +20,7 @@
 
 button {
     height: 50px;
-    width: 200px;
+    max-width: fit-content;
     color: #000000;
     border: 2px solid #0f0; 
     border-radius: 999999999999px;               
@@ -37,9 +37,9 @@ body {
 .container {
     width: 300px;          
     height: 50px;     
-    /*    
-    background-color: lightblue;  
-    */
+       
+    background-color: red;  
+   
     border: 2px solid black;     
     padding: 20px;         
     margin: 20px auto;     
@@ -75,9 +75,9 @@ hr {
 .navBar{
     background-color: #FFFFFF;  
     display: flex;
-    justify-content: center;
     flex-direction: row;
     height: max-content;
+    justify-content: center;
 }
 
 .google-login-button {
@@ -90,7 +90,8 @@ hr {
     justify-content: center;
     flex-direction: row;
     border: 2px solid black;
-    max-height: fit-content;
+    height: 500px;
+    background-color: black;  
 }
 
 .timer{
@@ -177,4 +178,33 @@ hr {
     margin-right: 200px;
     margin-top: 150px;
     margin-bottom: 200px;
+}
+
+.flex-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 245px;
+    padding-right: 245px;
+    font-size: 30px;
+}
+
+.pfpnav{
+    height: 50px;
+    width: 50px;
+    border-radius: 999999999999999px;
+    border: 2px solid black;
+    margin-right: 100px;
+    background-color: tomato;
+}
+
+.hug{
+    margin-right: 0px;
+}
+
+.usernav{
+    font-size: 40px;
+    color: purple;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
