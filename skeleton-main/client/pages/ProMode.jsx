@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-
+import '/srcimages/IMG_2745.jpg';
+import '/srcimages/bl7.jpg';
+import '/srcimages/bl3.jpg';
+import '/srcimages/bl10.jpg';
+import '/srcimages/bl26.jpg';
 
 const ProMode = () => {
   const images = [

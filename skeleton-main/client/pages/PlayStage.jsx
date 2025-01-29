@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const PlayStage = () => {
   return (
     <div className="background">

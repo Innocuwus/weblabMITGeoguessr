@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-
+import '/favicon.png';
 const LoggedIn = () => {
 
   const [username, setUsername] = useState("Guest");
