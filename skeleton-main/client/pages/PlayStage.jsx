@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "/srcimages/cooltext474648493168121.gif";
 
 const PlayStage = () => {
   return (
