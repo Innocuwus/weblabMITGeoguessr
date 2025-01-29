@@ -43,18 +43,18 @@ const LoggedIn = () => {
     <div className="background">
       <link rel="stylesheet" href="/styles.css" />
       <div className="navBar">
-          <div id="username" className='flex-text'>Welcome back, {username}!</div>
+          <div id="username" className='flex-text2'>Welcome back, {username}!</div>
           <img src={imageUrl} alt="profile picture" className='pfpnav' />
           <button id="signout" className='hug'>Sign out</button>
       </div>
       <hr />
       <div className="flexButton">
         <div className='flex-Buttons'>
-      <button type="button" id="play">Play</button>
+      <button type="button" id="play">Choose Gamemodes</button>
       </div>
-      <div className='flex-Buttons'>
+      {/* <div className='flex-Buttons'>
       <button type="button" id="lead">Leaderboard</button>
-      </div>
+      </div> */}
       <div className='flex-Buttons'>
       <button type="button" id="accSett">Account Settings</button>
       </div>

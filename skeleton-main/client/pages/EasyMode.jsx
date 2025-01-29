@@ -43,7 +43,7 @@ const EasyMode = () => {
   const handleInputChange = (event) => {
     setUserInput(event.target.value);
     if (event.target.value.toLowerCase() === randomImage.value.toLowerCase()) {
-      setIsTimeUp(true);
+      setFeedback('Correct!');
     } else {
       setFeedback('Try again!');
     }
