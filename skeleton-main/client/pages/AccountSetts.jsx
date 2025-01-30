@@ -6,7 +6,7 @@ const AccountSetts = () => {
 
   // Handle changes to the username input field
   const handleUsernameChange = (event) => {
-    if(event.target.value.length < 20){
+    if(event.target.value.length < 5){
     setUsername(event.target.value);
     }
   };
@@ -63,7 +63,7 @@ const AccountSetts = () => {
     <div className="background">
       <link rel="stylesheet" href="/styles.css" />
       <div className="navBar">
-        <div className="usernav">{username || 'Guest'}</div>
+        <div className="usernav">{username || 'Bob'}</div>
         <div className="flex-text">Account Settings</div>
         <img 
           src={profilePicture || '/favicon.png'} 
@@ -73,6 +73,7 @@ const AccountSetts = () => {
         <button id="backtolog">Previous</button>
         <button id="signout">Sign out</button>
       </div>
+      <hr />
       <div className="settings">
         <div className="settingsitem">
           <label>

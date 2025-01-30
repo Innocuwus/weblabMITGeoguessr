@@ -54,6 +54,7 @@ router.get("/user", async (req, res) => {
      res.json({
       username: user.username,
       profilePicture: user.profilePicture,
+      correctGuesses: user.correctGuesses
     }); // Return user data in JSON format
   } catch (err) {
     console.error("Error:", err); // Log the error on the server

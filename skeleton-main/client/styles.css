@@ -6,7 +6,7 @@ button {
     height: 50px;
     max-width: fit-content;
     color: #000000;
-    border: 2px solid #37758E; 
+    border: 3px solid #37758E; 
     cursor: url("/robloxcursor.png"), pointer;         
     font-size: 1em;         
     transition: background-color 0.3s ease, border-color 0.3s ease;  
@@ -49,10 +49,10 @@ hr {
     height: 10px;
     margin-top: 0;
     margin-bottom: 20px;
-    margin-left: 100px;
-    margin-right:100px;
-    background-color: #000000;
-    color: #000000;
+    margin-left: 00px;
+    margin-right: 00px;
+    background-color: #37758E;
+    color: #37758E;
 }
 
 .navBar{
@@ -79,15 +79,15 @@ hr {
 
 .timer{
     background-color: white;
-    border: 2px solid #37758E;
+    border: 3px solid #37758E;
 }
 
 .flex-item-left{
     margin-left: 10px;
     margin-right: 450px;
-    padding-top: 12px;
+    padding-top: 7px;
     padding-bottom: 2px;
-    font-weight: 30px;
+    font-size: 30px;
 }
 
 .flex-item-right{
@@ -190,7 +190,9 @@ hr {
     border-radius: 999999999999999px;
     border: 2px solid black;
     margin-right: 100px;
-    background-color: tomato;
+    background-color: lightpink;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 .hug{
@@ -202,10 +204,21 @@ hr {
     color: purple;
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-left: 20px;
 }
 
 .timer{
     justify-content: center;
     padding-top: 12px;
-    padding-bottom: 2px;
+    padding-bottom: 2px; 
+    margin-right: 150px;
+}
+
+.maintitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 450px;
+    margin-right: 450px;
+    font-size: 30px;
 }

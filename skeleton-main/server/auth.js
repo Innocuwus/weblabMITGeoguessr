@@ -26,9 +26,9 @@ function getOrCreateUser(user) {
 
     const newUser = new User({
       username: { type: String, required: true, default: "web.lab player" },
-      profilePicture: { type: String, default: "/srcimages/foxegg.png" }, 
+      profilePicture: { type: String, default: "/foxegg.png" }, 
       correctGuesses: { type: Number, default: 0 }, 
-      googleid: user.sub,
+      googleid: user.sub
     });
 
     return newUser.save();

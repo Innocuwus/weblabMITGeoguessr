@@ -10,6 +10,7 @@ const LeaderPage = () => {
           <button id="backtolog">Previous</button>
           <button id="signout">Sign out</button>
         </div>
+        <hr />
         <div className='flexLeaderboard'>
       <b>The Top 10!</b>
       <ul>

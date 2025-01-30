@@ -32,9 +32,10 @@ const Homepage = () => {
    
        <div className="background">
        <link rel="stylesheet" href="/styles.css" />
-         <div>
-           <h1 className="navBar">MIT Geoguessr</h1>
+         <div className='navBar'>
+           <div className='maintitle'>MIT Geoguessr</div>
          </div>
+         <hr />
          <div className = "container">
          <GoogleLogin
            onSuccess={handleLogin}

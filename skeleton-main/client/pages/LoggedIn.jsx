@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 // require('/srcimages/favicon.png');
 const LoggedIn = () => {
 
-  const [username, setUsername] = useState("Guest");
+  const [username, setUsername] = useState("Bob");
   const [imageUrl, setImageUrl] = useState("/favicon.png");
   
   useEffect(() => {
@@ -50,11 +50,11 @@ const LoggedIn = () => {
       <hr />
       <div className="flexButton">
         <div className='flex-Buttons'>
-      <button type="button" id="play">Choose Gamemodes</button>
+      <button type="button" id="play">Choose Gamemode</button>
       </div>
-      {/* <div className='flex-Buttons'>
+      <div className='flex-Buttons'>
       <button type="button" id="lead">Leaderboard</button>
-      </div> */}
+      </div>
       <div className='flex-Buttons'>
       <button type="button" id="accSett">Account Settings</button>
       </div>
