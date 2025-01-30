@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import '/srcimages/IMG_2745.jpg';
-import '/srcimages/bl7.jpg';
-import '/srcimages/bl3.jpg';
-import '/srcimages/bl10.jpg';
-import '/srcimages/bl26.jpg';
+// require ('/srcimages/IMG_2745.jpg');
+// require('/srcimages/bl7.jpg');
+// require('/srcimages/bl3.jpg');
+// require('/srcimages/bl10.jpg');
+// require('/srcimages/bl26.jpg');
+// require("/srcimages/MITgeoguessergame.png");
 
 const ProMode = () => {
   const images = [
-    { src: '/srcimages/IMG_2745.jpg', value: '32' },
-    { src: '/srcimages/bl7.jpg', value: '7' },
-    { src: '/srcimages/bl3.jpg', value: '3' },
-    { src: '/srcimages/bl10.jpg', value: '10' },
-    { src: '/srcimages/bl26.jpg', value: '26' }
+    { src: '/IMG_2745.jpg', value: '32' },
+    { src: '/bl7.jpg', value: '7' },
+    { src: '/bl3.jpg', value: '3' },
+    { src: '/bl10.jpg', value: '10' },
+    { src: '/bl26.jpg', value: '26' }
   ];
 
 
@@ -65,7 +66,7 @@ const ProMode = () => {
       <link rel="stylesheet" href="/styles.css" />
       <div className = "flex-container">
       <img src={randomImage.src} alt="Randomized Image" />
-      <img src="/srcimages/MITgeoguessergame.png" alt="MIT Geoguesser image" />
+      <img src="/MITgeoguessergame.png" alt="MIT Geoguesser image" />
       </div>
       {isTimeUp ? (
         <div>Time's up! The correct answer was building: {randomImage.value}</div>

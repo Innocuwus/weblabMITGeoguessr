@@ -1,5 +1,5 @@
 import React from 'react';
-import "/srcimages/cooltext474648493168121.gif";
+// require("/srcimages/cooltext474648493168121.gif");
 
 const PlayStage = () => {
   return (
@@ -20,7 +20,7 @@ const PlayStage = () => {
         </div>
         <div className="flex-ButtonsPRO">
         <button id="pro">
-          <img src="/srcimages/cooltext474648493168121.gif" /></button>
+          <img src="/cooltext474648493168121.gif" /></button>
         </div>
         <script src="/src/playbutton.js"></script>
       </div>

@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import '/srcimages/favicon.png';
+// require('/srcimages/favicon.png');
 const LoggedIn = () => {
 
   const [username, setUsername] = useState("Guest");
-  const [imageUrl, setImageUrl] = useState("/srcimages/favicon.png");
+  const [imageUrl, setImageUrl] = useState("/favicon.png");
   
   useEffect(() => {
     async function fetchUserData() {
