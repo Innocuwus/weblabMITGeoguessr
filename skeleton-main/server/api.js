@@ -48,6 +48,7 @@ router.get("/user", async (req, res) => {
      // Update the user data if new values are provided
      if (username) user.username = username;
      if (profilePicture) user.profilePicture = profilePicture;
+     if (correctGuesses) user.correctGuesses = correctGuesses;
  
      // Save the updated user data
      await user.save();
@@ -62,7 +63,38 @@ router.get("/user", async (req, res) => {
   }
 });
 
+router.put("/user", async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id);
+    if (!user) return res.status(404).json({ message: "User not found" });
 
+    // Update user data (e.g., increment correct guesses)
+    user.correctGuesses += 1;
+    await user.save(); // Save the updated user data
+
+    res.json({
+      message: "User  guesses updated",
+      correctGuesses: user.correctGuesses, // Optionally send back the updated data
+    });
+  } catch (err) {
+    res.status(500).json({ message: "Error updating user data", error: err });
+  }
+});
+
+// GET the leaderboard (top 10 users)
+router.get('/leaderboard', async (req, res) => {
+  try {
+    // Query the users, sort by 'correctGuesses' in descending order, and limit to 10 results
+    const leaderboard = await User.find()  // Find all users
+      .sort({ correctGuesses: -1 })        // Sort by 'correctGuesses' descending
+      .limit(10);                          // Limit to top 10 users
+
+    res.json(leaderboard); // Return the sorted and limited list of users
+  } catch (error) {
+    console.error('Error fetching leaderboard:', error);
+    res.status(500).json({ message: 'Error fetching leaderboard' });
+  }
+});
 
 router.get('/homepage', (req, res) => {
   const html = ReactDOMServer.renderToString(React.createElement(Homepage));

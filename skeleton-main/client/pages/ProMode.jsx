@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// require ('/srcimages/IMG_2745.jpg');
-// require('/srcimages/bl7.jpg');
-// require('/srcimages/bl3.jpg');
-// require('/srcimages/bl10.jpg');
-// require('/srcimages/bl26.jpg');
-// require("/srcimages/MITgeoguessergame.png");
+import axios from "axios";
 
 const ProMode = () => {
   const images = [
@@ -46,10 +41,16 @@ const ProMode = () => {
     return () => clearInterval(timerId);
   }, [isTimeUp]);
 
-  const handleInputChange = (event) => {
+  const handleInputChange = async (event) => {
     setUserInput(event.target.value);
     if (event.target.value.toLowerCase() === randomImage.value.toLowerCase()) {
       setFeedback('Correct!');
+      try {
+        await axios.put('/user');
+        console.log('Correct guesses updated!');
+      } catch (error) {
+        console.error('Error updating user data:', error);
+      }
     } else {
       setFeedback('Try again!');
     }

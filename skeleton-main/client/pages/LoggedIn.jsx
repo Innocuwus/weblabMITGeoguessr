@@ -1,23 +1,20 @@
 import React, {useState, useEffect} from 'react';
-// require('/srcimages/favicon.png');
+
 const LoggedIn = () => {
 
   const [username, setUsername] = useState("Bob");
   const [imageUrl, setImageUrl] = useState("/favicon.png");
   
   useEffect(() => {
-    async function fetchUserData() {
+    async function fetchUserData(token) {
       try {
-        // const token = localStorage.getItem("authToken"); // Retrieve token from localStorage
-        // const response = await fetch("/user", {
-        //   headers: {
-        //     "Authorization": `Bearer ${token}` // or any other auth method you're using
-        //   }
-        // });
-
-          const response = await fetch("/api/user", {
-            credentials: 'include', // Include cookies in the request
-          });
+        const response = await fetch("/api/user", {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`, 
+            'Content-Type': 'application/json', 
+          },
+        });
   
         // Check if the response status is OK
         if (!response.ok) {
